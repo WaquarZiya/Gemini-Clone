@@ -1,0 +1,14 @@
+{% comment %} {% extends 'index.html' %} {% endcomment %}
+
+{% comment %} {% block content %} {% endcomment %}
+  <h1>Chat History</h1>
+  <ul>
+    {% for message in chats %}
+      <li>
+        {{ message.text_input }} (User)
+        <br>
+        {{ message.gemini_output }} (Gemini)
+      </li>
+    {% endfor %}
+  </ul>
+{% comment %} {% endblock %} {% endcomment %}
